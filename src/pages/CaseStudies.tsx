@@ -69,7 +69,7 @@ const CaseStudies = () => {
 
   const testimonials = [
     {
-      quote: "AICRA.ai transformed our network operations beyond our expectations. Their AI solution reduced our downtime by 65% and saved us millions in operational costs.",
+      quote: "AIQRA.ai transformed our network operations beyond our expectations. Their AI solution reduced our downtime by 65% and saved us millions in operational costs.",
       author: "Sarah Al-Rashid",
       position: "CTO, Regional Telecommunications",
       company: "Major GCC Provider"
@@ -99,7 +99,7 @@ const CaseStudies = () => {
               <span className="block text-secondary-brand">Stories</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Discover how AICRA.ai's AI and robotics solutions have transformed businesses 
+              Discover how AIQRA.ai's AI and robotics solutions have transformed businesses 
               across the Middle East, delivering measurable results and competitive advantages.
             </p>
           </div>
@@ -201,7 +201,7 @@ const CaseStudies = () => {
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Hear directly from the leaders who have experienced the transformational 
-              impact of AICRA.ai's AI and robotics solutions.
+              impact of AIQRA.ai's AI and robotics solutions.
             </p>
           </div>
 
@@ -234,7 +234,7 @@ const CaseStudies = () => {
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
             Join the organizations already experiencing transformational results with 
-            AICRA.ai's cutting-edge AI and robotics solutions.
+            AIQRA.ai's cutting-edge AI and robotics solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

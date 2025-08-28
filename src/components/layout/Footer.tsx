@@ -39,7 +39,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-to-r from-secondary-brand to-accent-brand rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">A</span>
               </div>
-              <span className="text-2xl font-display font-bold">AICRA.ai</span>
+              <span className="text-2xl font-display font-bold">AIQRA.ai</span>
             </Link>
             <p className="text-white/80 mb-6 leading-relaxed">
               Leading the future of AI and robotics innovation. Transforming industries through 
@@ -50,7 +50,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-secondary-brand" />
-                <span className="text-white/80">contact@aicra.ai</span>
+                <span className="text-white/80">contact@aiqra.ai</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-secondary-brand" />
@@ -139,7 +139,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-white/20 pt-8 mt-12 text-center">
           <p className="text-white/60">
-            © {new Date().getFullYear()} AICRA.ai. All rights reserved. Innovating the future of AI and robotics.
+            © {new Date().getFullYear()} AIQRA.ai. All rights reserved. Innovating the future of AI and robotics.
           </p>
         </div>
       </div>

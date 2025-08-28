@@ -76,7 +76,7 @@ const Index = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
-            alt="AICRA.ai - Advanced AI and Robotics Technology"
+            alt="AIQRA.ai - Advanced AI and Robotics Technology"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-primary/60 to-transparent" />
@@ -92,7 +92,7 @@ const Index = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-              AICRA.ai leads the transformation of industries through cutting-edge artificial intelligence 
+              AIQRA.ai leads the transformation of industries through cutting-edge artificial intelligence 
               and autonomous systems. From Oman to the world, we're building the intelligent future.
             </p>
             
@@ -130,7 +130,7 @@ const Index = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 text-gradient">
-              Why Choose AICRA.ai
+              Why Choose AIQRA.ai
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We combine world-class expertise with innovative technology to deliver 
@@ -193,7 +193,7 @@ const Index = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Join the AI revolution with AICRA.ai. Let's discuss how our cutting-edge 
+            Join the AI revolution with AIQRA.ai. Let's discuss how our cutting-edge 
             solutions can drive innovation and growth in your organization.
           </p>
           

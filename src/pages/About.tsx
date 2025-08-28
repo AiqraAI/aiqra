@@ -31,7 +31,7 @@ const About = () => {
     {
       year: '2020',
       title: 'Foundation',
-      description: 'AICRA.ai founded with a vision to bring world-class AI and robotics innovation to the Middle East.',
+      description: 'AIQRA.ai founded with a vision to bring world-class AI and robotics innovation to the Middle East.',
     },
     {
       year: '2021',
@@ -66,7 +66,7 @@ const About = () => {
               <span className="block text-secondary-brand">Intelligent Technology</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              AICRA.ai is at the forefront of artificial intelligence and robotics innovation, 
+              AIQRA.ai is at the forefront of artificial intelligence and robotics innovation, 
               transforming how businesses operate and compete in the digital age.
             </p>
           </div>
@@ -177,7 +177,7 @@ const About = () => {
             Join Us in Shaping the Future
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Discover how AICRA.ai can transform your organization with cutting-edge 
+            Discover how AIQRA.ai can transform your organization with cutting-edge 
             AI and robotics solutions tailored to your industry and goals.
           </p>
           

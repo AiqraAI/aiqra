@@ -27,9 +27,9 @@ const Media = () => {
       image: '/api/placeholder/400/240',
     },
     {
-      title: 'AICRA.ai Wins Regional Innovation Award',
+      title: 'AIQRA.ai Wins Regional Innovation Award',
       excerpt: 'Recognition for our groundbreaking work in autonomous systems and AI-powered business solutions.',
-      author: 'AICRA.ai Team',
+      author: 'AIQRA.ai Team',
       date: '2024-12-05',
       readTime: '3 min read',
       category: 'Company News',
@@ -49,7 +49,7 @@ const Media = () => {
     },
     {
       title: 'Partnership Announcement: Expanding AI Solutions Across GCC',
-      author: 'AICRA.ai Team',
+      author: 'AIQRA.ai Team',
       date: '2024-12-03',
       readTime: '4 min read',
       category: 'Partnerships',
@@ -117,7 +117,7 @@ const Media = () => {
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
               Stay informed with the latest developments in AI and robotics innovation, 
-              industry insights, and AICRA.ai company updates from our expert team.
+              industry insights, and AIQRA.ai company updates from our expert team.
             </p>
           </div>
         </div>
@@ -329,7 +329,7 @@ const Media = () => {
             Stay Connected
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Follow AICRA.ai for the latest insights on AI and robotics innovation, 
+            Follow AIQRA.ai for the latest insights on AI and robotics innovation, 
             industry trends, and company updates.
           </p>
           

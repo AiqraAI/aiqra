@@ -40,12 +40,12 @@ const Internships = () => {
     {
       icon: Users,
       title: 'Expert Mentorship',
-      description: 'Work directly with AICRA.ai engineers and researchers on real client projects and innovations.',
+      description: 'Work directly with AIQRA.ai engineers and researchers on real client projects and innovations.',
     },
     {
       icon: Star,
       title: 'Career Placement',
-      description: '95% placement rate with leading tech companies and continued opportunities within AICRA.ai.',
+      description: '95% placement rate with leading tech companies and continued opportunities within AIQRA.ai.',
     },
   ];
 
@@ -54,7 +54,7 @@ const Internships = () => {
       name: 'Amira Al-Kindi',
       program: 'AI Development Track',
       company: 'Now at Google AI',
-      quote: 'AICRA.ai gave me the practical skills and real-world experience that launched my career in AI. The mentorship was exceptional.',
+      quote: 'AIQRA.ai gave me the practical skills and real-world experience that launched my career in AI. The mentorship was exceptional.',
       image: '/api/placeholder/60/60',
     },
     {

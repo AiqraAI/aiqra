@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* AICRA.ai Design System - Professional AI + Robotics Brand */
+/* AIQRA.ai Design System - Professional AI + Robotics Brand */
 
 @layer base {
   :root {
@@ -10,7 +10,7 @@
     --background: 0 0% 100%;
     --foreground: 216 25% 12%;
     
-    /* AICRA Brand Palette */
+    /* AIQRA Brand Palette */
     --primary: 214 84% 16%;
     --primary-foreground: 0 0% 98%;
     --primary-light: 214 54% 24%;

@@ -28,7 +28,7 @@ const Header = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary-brand rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">A</span>
             </div>
-            <span className="text-2xl font-display font-bold text-gradient">AICRA.ai</span>
+            <span className="text-2xl font-display font-bold text-gradient">AIQRA.ai</span>
           </Link>
 
           {/* Desktop Navigation */}

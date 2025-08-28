@@ -21,7 +21,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'contact@aicra.ai',
+      details: 'contact@aiqra.ai',
       description: 'Get in touch for partnerships, inquiries, and collaboration opportunities.',
       action: 'Send Email',
     },
@@ -85,7 +85,7 @@ const Contact = () => {
       
       toast({
         title: "Message Sent Successfully!",
-        description: "Thank you for contacting AICRA.ai. We'll respond within 24 hours.",
+        description: "Thank you for contacting AIQRA.ai. We'll respond within 24 hours.",
       });
       
       // Reset form
@@ -119,7 +119,7 @@ const Contact = () => {
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
               Ready to transform your business with AI and robotics? Let's discuss how 
-              AICRA.ai can help you achieve your innovation goals.
+              AIQRA.ai can help you achieve your innovation goals.
             </p>
           </div>
         </div>
