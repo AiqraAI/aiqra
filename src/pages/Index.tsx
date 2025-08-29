@@ -15,33 +15,33 @@ const Index = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Advanced AI Agents',
-      description: 'Cutting-edge artificial intelligence systems that learn, adapt, and deliver intelligent automation solutions.',
+      title: 'Agentic AI',
+      description: 'AI that acts with purpose — embodied intelligence that doesn\'t just think, but takes meaningful action.',
     },
     {
       icon: Cpu,
-      title: 'Robotics Innovation',
-      description: 'Next-generation robotics platforms designed for real-world applications across multiple industries.',
+      title: 'Sovereign Technology',
+      description: 'Gulf-born robotics and AI solutions that combine cultural depth with cutting-edge global technology.',
     },
     {
       icon: Zap,
-      title: 'Rapid Deployment',
-      description: 'Fast-track implementation with our proven methodologies and expert technical support teams.',
+      title: 'Women-Led Excellence',
+      description: 'Top AI women leading breakthrough solutions with precision and mastery in everything we build.',
     },
     {
       icon: Users,
-      title: 'Expert Training',
-      description: 'Gold-standard internship programs and professional development in AI and robotics technologies.',
+      title: 'Gulf Empowerment',
+      description: 'Creating opportunities for women and youth across the Gulf through world-class AI education and training.',
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'International partnerships and solutions serving clients across the Middle East and beyond.',
+      title: 'Regional Leadership',
+      description: 'Trusted by governments and enterprises across the Gulf as the go-to AI and robotics partner.',
     },
     {
       icon: TrendingUp,
-      title: 'Proven Results',
-      description: 'Measurable outcomes and transformational impact across telecommunications, education, and enterprise.',
+      title: 'Future Vision',
+      description: 'Seeing what others don\'t, building what others can\'t — setting the standard for AI in the region.',
     },
   ];
 
@@ -86,14 +86,14 @@ const Index = () => {
         <div className="relative z-10 container-custom text-center text-white">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold font-display mb-6 leading-tight">
-              The Future of
+              Read the Future.
               <span className="block text-gradient bg-gradient-to-r from-secondary-brand to-accent-brand bg-clip-text text-transparent">
-                AI & Robotics
+                Create it with us.
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-              AIQRA.ai leads the transformation of industries through cutting-edge artificial intelligence 
-              and autonomous systems. From Oman to the world, we're building the intelligent future.
+              AIQRA.ai is a women-led, Gulf-born AI and robotics powerhouse creating agentic intelligence 
+              that doesn't just think — it acts. From the Gulf to the world, we lead sovereign technology innovation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up">
@@ -130,11 +130,11 @@ const Index = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 text-gradient">
-              Why Choose AIQRA.ai
+              Why AIQRA.ai Leads
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We combine world-class expertise with innovative technology to deliver 
-              transformational AI and robotics solutions that drive real business value.
+              We're not just a company — we're a movement. Women-led innovation meets Gulf vision, 
+              creating agentic AI solutions that transform industries and empower communities.
             </p>
           </div>
 
@@ -190,11 +190,11 @@ const Index = () => {
       <section className="section-padding bg-gradient-to-r from-primary via-primary-light to-secondary-brand text-white">
         <div className="container-custom text-center">
           <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">
-            Ready to Transform Your Business?
+            Ready to Shape the Future?
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Join the AI revolution with AIQRA.ai. Let's discuss how our cutting-edge 
-            solutions can drive innovation and growth in your organization.
+            Join the AIQRA.ai movement. Let's create agentic AI solutions that combine 
+            Gulf vision with global excellence for your organization's future.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

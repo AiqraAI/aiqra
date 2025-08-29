@@ -7,51 +7,51 @@ const About = () => {
   const values = [
     {
       icon: Target,
-      title: 'Innovation Excellence',
-      description: 'We push the boundaries of what\'s possible in AI and robotics, delivering breakthrough solutions that transform industries.',
-    },
-    {
-      icon: Eye,
-      title: 'Visionary Leadership',
-      description: 'Our forward-thinking approach positions clients at the forefront of technological advancement and competitive advantage.',
-    },
-    {
-      icon: Award,
-      title: 'Quality Commitment',
-      description: 'Every solution meets the highest standards of performance, reliability, and scalability for long-term success.',
+      title: 'Excellence (Itqan)',
+      description: 'Precision and mastery in everything we build — setting the highest standards for AI and robotics innovation.',
     },
     {
       icon: Users,
-      title: 'Partnership Focus',
-      description: 'We build lasting relationships with clients, understanding their unique challenges to deliver tailored solutions.',
+      title: 'Empowerment (Tamkin)',
+      description: 'Creating opportunities for women and youth across the Gulf, fostering the next generation of AI leaders.',
+    },
+    {
+      icon: Eye,
+      title: 'Vision (Basira)',
+      description: 'Seeing what others don\'t, building what others can\'t — pioneering the future of agentic intelligence.',
+    },
+    {
+      icon: Award,
+      title: 'Integrity (Amanah)',
+      description: 'Trust as the foundation of AI adoption — delivering reliable, ethical, and culturally-rooted solutions.',
     },
   ];
 
   const milestones = [
     {
       year: '2020',
-      title: 'Foundation',
-      description: 'AIQRA.ai founded with a vision to bring world-class AI and robotics innovation to the Middle East.',
+      title: 'The Vision',
+      description: 'AIQRA.ai founded as a women-led movement to create agentic AI that embodies Gulf vision and global excellence.',
     },
     {
       year: '2021',
-      title: 'First Solutions',
-      description: 'Launched our first AI automation platforms for telecommunications and enterprise clients.',
+      title: 'Sovereign Technology',
+      description: 'Launched our first agentic AI solutions, combining cultural depth with cutting-edge robotics innovation.',
     },
     {
       year: '2022',
-      title: 'International Expansion',
-      description: 'Extended our reach beyond Oman, serving clients across the GCC and establishing key partnerships.',
+      title: 'Gulf Leadership',
+      description: 'Became the trusted AI partner across the GCC, empowering governments and enterprises with future-ready solutions.',
     },
     {
       year: '2023',
-      title: 'Internship Excellence',
-      description: 'Launched gold-standard AI internship program, training the next generation of technologists.',
+      title: 'Women in AI',
+      description: 'Established the region\'s premier AI empowerment programs, training women and youth in agentic intelligence.',
     },
     {
       year: '2024',
-      title: 'Global Recognition',
-      description: 'Recognized as a leading AI and robotics innovator with 50+ successful deployments worldwide.',
+      title: 'Global Movement',
+      description: 'Recognized as the Gulf\'s leading AI powerhouse, setting the standard for sovereign technology innovation.',
     },
   ];
 
@@ -62,12 +62,12 @@ const About = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-display mb-6">
-              Pioneering the Future of
-              <span className="block text-secondary-brand">Intelligent Technology</span>
+              Women-Led, Gulf-Born
+              <span className="block text-secondary-brand">AI Powerhouse</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              AIQRA.ai is at the forefront of artificial intelligence and robotics innovation, 
-              transforming how businesses operate and compete in the digital age.
+              AIQRA.ai creates agentic intelligence that doesn't just think — it acts. 
+              Born from the Arabic "Iqra" (اقرأ) meaning "read," we command knowledge to create the future.
             </p>
           </div>
         </div>
@@ -82,23 +82,23 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                To democratize access to cutting-edge AI and robotics technology, empowering 
-                organizations across the Middle East and beyond to achieve unprecedented levels 
-                of innovation, efficiency, and growth.
+                To redefine the future of intelligence — not as something abstract, but as embodied, 
+                actionable, and empowering. We exist to create agentic AI that acts with purpose, 
+                leading sovereign technology innovation from the Gulf to the world.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We believe that intelligent automation should be accessible, practical, and 
-                transformational. Our solutions bridge the gap between complex technology and 
-                real-world business value.
+                AIQRA.ai is not just a company. It's a movement for women redefining leadership in AI, 
+                for the Gulf shaping its own technological destiny, and for the future of intelligence 
+                built here and exported globally.
               </p>
             </div>
             
             <div className="card-elegant bg-gradient-subtle">
               <h3 className="text-3xl font-bold mb-6">Our Vision</h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                To be the Middle East's most trusted partner for AI and robotics innovation, 
-                recognized globally for our technical excellence, educational leadership, and 
-                transformational impact on industries and communities.
+                To be the go-to AI and robotics partner in the Gulf — trusted by governments, 
+                enterprises, and innovators who want future-ready solutions that combine cultural 
+                depth with cutting-edge global technology. We don't follow trends. We set the standard.
               </p>
               <div className="flex items-center text-primary font-semibold">
                 <span>Shaping Tomorrow's World</span>
@@ -174,11 +174,11 @@ const About = () => {
       <section className="section-padding bg-gradient-to-r from-primary via-primary-light to-secondary-brand text-white">
         <div className="container-custom text-center">
           <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">
-            Join Us in Shaping the Future
+            Join the Movement
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Discover how AIQRA.ai can transform your organization with cutting-edge 
-            AI and robotics solutions tailored to your industry and goals.
+            AIQRA.ai is redefining what AI means in our region — sovereign, agentic, women-led, unstoppable. 
+            Ready to create the future with us?
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
