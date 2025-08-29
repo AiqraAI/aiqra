@@ -10,19 +10,19 @@
     --background: 0 0% 100%;
     --foreground: 216 25% 12%;
     
-    /* AIQRA Brand Palette */
-    --primary: 214 84% 16%;
+    /* AIQRA Brand Palette - Polynesian Blue Theme */
+    --primary: 214 98% 28%; /* Polynesian Blue #01458E */
     --primary-foreground: 0 0% 98%;
-    --primary-light: 214 54% 24%;
-    --primary-glow: 214 84% 46%;
+    --primary-light: 214 78% 35%;
+    --primary-glow: 214 88% 50%;
     
-    --secondary-brand: 186 94% 28%;
+    --secondary-brand: 186 100% 35%; /* Complementary Teal #00A3B5 */
     --secondary-brand-foreground: 0 0% 98%;
-    --secondary-light: 186 74% 35%;
+    --secondary-light: 186 80% 45%;
     
-    --accent-brand: 266 85% 58%;
+    --accent-brand: 15 100% 60%; /* Vibrant Orange #FF6B35 */
     --accent-brand-foreground: 0 0% 98%;
-    --accent-light: 266 65% 68%;
+    --accent-light: 15 80% 70%;
     
     /* UI System Colors */
     --card: 0 0% 100%;
