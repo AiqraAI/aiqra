@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Cpu, Smartphone, GraduationCap, Building, Zap, Shield, BarChart3 } from 'lucide-react';
+import { ArrowRight, Brain, Cpu, Smartphone, GraduationCap, Building, Zap, Shield, BarChart3, Heart } from 'lucide-react';
 
 const Solutions = () => {
   const mainSolutions = [
@@ -106,10 +106,32 @@ const Solutions = () => {
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 text-gradient">
               Core Technology Platforms
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Our flagship AI and robotics platforms provide the foundation for 
               transformational solutions across every industry sector.
             </p>
+            
+            {/* Human-Centered AI Highlight */}
+            <div className="bg-gradient-to-r from-primary/10 via-secondary-brand/10 to-accent-brand/10 rounded-2xl p-8 mb-12 max-w-4xl mx-auto">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="w-20 h-20 bg-gradient-to-r from-primary to-secondary-brand rounded-2xl flex items-center justify-center">
+                  <Heart className="w-10 h-10 text-white" />
+                </div>
+                <div className="text-center md:text-left flex-1">
+                  <h3 className="text-2xl font-bold mb-2">Human-Centred AI Solutions</h3>
+                  <p className="text-muted-foreground mb-4">
+                    AI that puts people first — ethical, transparent, and designed with empathy, 
+                    in line with GCC AI Governance and UAE AI Seal programme standards.
+                  </p>
+                  <Link to="/solutions/human-centred-ai">
+                    <Button variant="outline" className="group">
+                      Discover Our Approach
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -265,6 +287,11 @@ const Solutions = () => {
               <Button className="btn-hero group">
                 Schedule Consultation
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link to="/solutions/human-centred-ai">
+              <Button className="btn-secondary">
+                Human-Centred AI Solutions
               </Button>
             </Link>
             <Link to="/case-studies">

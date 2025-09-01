@@ -7,6 +7,7 @@ import Layout from "@/components/layout/Layout";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Solutions from "./pages/Solutions";
+import HumanCentredAI from "./pages/HumanCentredAI";
 import CaseStudies from "./pages/CaseStudies";
 import Internships from "./pages/Internships";
 import Media from "./pages/Media";
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/solutions" element={<Solutions />} />
+            <Route path="/solutions/human-centred-ai" element={<HumanCentredAI />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/internships" element={<Internships />} />
             <Route path="/media" element={<Media />} />
