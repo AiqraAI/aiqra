@@ -2,73 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-/* AIQRA.ai Design System - Professional AI + Robotics Brand */
+/* AIQRA.ai Design System - Official Style Guide Implementation */
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 216 25% 12%;
+    /* AIQRA Brand Colors - Official Palette */
+    --background: 0 0% 98%; /* Neutral Light #F9F9F9 */
+    --foreground: 0 0% 20%; /* Neutral Dark #333333 */
     
-    /* AIQRA Brand Palette - Polynesian Blue Theme */
-    --primary: 214 98% 28%; /* Polynesian Blue #01458E */
+    /* Primary Brand - Polynesian Blue #01458E */
+    --primary: 214 98% 28%;
     --primary-foreground: 0 0% 98%;
     --primary-light: 214 78% 35%;
     --primary-glow: 214 88% 50%;
     
-    --secondary-brand: 186 100% 35%; /* Complementary Teal #00A3B5 */
+    /* Secondary Brand - Complementary Teal #00A3B5 */
+    --secondary-brand: 186 100% 35%;
     --secondary-brand-foreground: 0 0% 98%;
     --secondary-light: 186 80% 45%;
     
-    --accent-brand: 15 100% 60%; /* Vibrant Orange #FF6B35 */
+    /* Accent Brand - Vibrant Orange #FF6B35 */
+    --accent-brand: 15 100% 60%;
     --accent-brand-foreground: 0 0% 98%;
     --accent-light: 15 80% 70%;
     
     /* UI System Colors */
     --card: 0 0% 100%;
-    --card-foreground: 216 25% 12%;
+    --card-foreground: 0 0% 20%;
     
-    --secondary: 214 15% 96%;
-    --secondary-foreground: 216 25% 12%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
     
-    --muted: 214 15% 96%;
-    --muted-foreground: 216 15% 46%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 46%;
     
-    --accent: 214 15% 96%;
-    --accent-foreground: 216 25% 12%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 20%;
     
-    --border: 214 20% 88%;
-    --input: 214 20% 88%;
-    --ring: 214 84% 46%;
+    --border: 0 0% 88%;
+    --input: 0 0% 96%;
+    --ring: 214 98% 28%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
-    /* Radius */
-    --radius: 0.75rem;
+    /* AIQRA Component Styling */
+    --radius: 1rem; /* 16px rounded corners for cards */
+    --radius-button: 0.75rem; /* 12px for buttons */
     
-    /* Professional Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(214 84% 16%), hsl(186 94% 28%));
-    --gradient-hero: linear-gradient(135deg, hsl(216 25% 12%) 0%, hsl(214 84% 16%) 50%, hsl(186 94% 28%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(214 20% 98%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(214 15% 96%) 100%);
+    /* Professional Shadows - Soft & Subtle */
+    --shadow-card: 0 4px 20px -2px hsl(0 0% 20% / 0.08);
+    --shadow-card-hover: 0 8px 30px -4px hsl(0 0% 20% / 0.12);
+    --shadow-elegant: 0 10px 40px -10px hsl(214 98% 28% / 0.15);
+    --shadow-glow: 0 0 40px hsl(214 98% 28% / 0.3);
     
-    /* Glass Effects */
-    --glass-bg: hsla(0 0% 100% / 0.1);
-    --glass-border: hsla(214 84% 46% / 0.2);
+    /* Typography - Official Style Guide */
+    --font-heading: 'Poppins', system-ui, sans-serif; /* H1-H3 Bold Modern */
+    --font-body: 'Lato', system-ui, sans-serif; /* Body Text Readable */
     
-    /* Professional Shadows */
-    --shadow-elegant: 0 10px 40px -10px hsl(214 84% 16% / 0.15);
-    --shadow-glow: 0 0 40px hsl(214 84% 46% / 0.3);
-    --shadow-card: 0 4px 20px -2px hsl(216 25% 12% / 0.08);
+    /* Typography Sizes */
+    --text-h1-desktop: 3rem; /* 48px */
+    --text-h1-mobile: 2rem; /* 32px */
+    --text-h2-desktop: 2rem; /* 32px */
+    --text-h2-mobile: 1.5rem; /* 24px */
+    --text-h3-desktop: 1.5rem; /* 24px */
+    --text-h3-mobile: 1.125rem; /* 18px */
+    --text-body-desktop: 1rem; /* 16px */
+    --text-body-mobile: 0.875rem; /* 14px */
+    --text-button: 1rem; /* 16px bold */
     
-    /* Typography */
-    --font-display: 'Inter', system-ui, sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
+    /* Layout - 8px Spacing System */
+    --spacing-xs: 0.5rem; /* 8px */
+    --spacing-sm: 1rem; /* 16px */
+    --spacing-md: 1.5rem; /* 24px */
+    --spacing-lg: 2rem; /* 32px */
+    --spacing-xl: 3rem; /* 48px */
+    --spacing-2xl: 4rem; /* 64px */
     
-    /* Animations */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Animations - Micro Interactions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --scale-hover: 1.02; /* Card hover scale */
   }
 }
 
@@ -78,53 +92,134 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground;
     font-family: var(--font-body);
+    font-size: var(--text-body-desktop);
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
+  /* AIQRA Typography Scale */
+  h1 {
+    font-family: var(--font-heading);
+    font-size: var(--text-h1-desktop);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-family: var(--font-heading);
+    font-size: var(--text-h2-desktop);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-h3-desktop);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  
+  h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+  }
+  
+  p, body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  /* Mobile Typography */
+  @media (max-width: 768px) {
+    body {
+      font-size: var(--text-body-mobile);
+    }
+    
+    h1 {
+      font-size: var(--text-h1-mobile);
+    }
+    
+    h2 {
+      font-size: var(--text-h2-mobile);
+    }
+    
+    h3 {
+      font-size: var(--text-h3-mobile);
+    }
   }
 }
 
 @layer components {
-  /* Professional Button Variants */
-  .btn-hero {
-    @apply bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--secondary-brand))] text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  /* AIQRA Button Components - Style Guide Compliant */
+  .btn-primary {
+    @apply bg-[hsl(var(--primary))] text-white font-bold px-8 py-4 rounded-[var(--radius-button)] 
+           transition-all duration-300 hover:shadow-lg hover:scale-105 uppercase text-[var(--text-button)];
   }
   
   .btn-secondary {
-    @apply border-2 border-[hsl(var(--primary))] text-[hsl(var(--primary))] font-semibold px-8 py-4 rounded-xl hover:bg-[hsl(var(--primary))] hover:text-white transition-all duration-300;
+    @apply border-2 border-[hsl(var(--primary))] text-[hsl(var(--primary))] font-bold px-8 py-4 
+           rounded-[var(--radius-button)] hover:bg-[hsl(var(--primary))] hover:text-white 
+           transition-all duration-300 uppercase text-[var(--text-button)];
   }
   
-  .btn-ghost {
-    @apply text-[hsl(var(--primary))] font-semibold px-6 py-3 rounded-lg hover:bg-[hsl(var(--muted))] transition-all duration-200;
+  .btn-accent {
+    @apply bg-[hsl(var(--accent-brand))] text-white font-bold px-8 py-4 rounded-[var(--radius-button)] 
+           transition-all duration-300 hover:shadow-lg hover:scale-105 uppercase text-[var(--text-button)];
   }
   
-  /* Card Components */
+  /* AIQRA Card Components */
   .card-elegant {
-    @apply bg-white rounded-2xl shadow-[var(--shadow-card)] border border-[hsl(var(--border))] p-8 transition-all duration-300 hover:shadow-[var(--shadow-elegant)];
+    @apply bg-white rounded-[var(--radius)] shadow-[var(--shadow-card)] border border-[hsl(var(--border))] 
+           p-8 transition-all duration-300 hover:shadow-[var(--shadow-card-hover)] hover:scale-[var(--scale-hover)];
   }
   
-  .card-glass {
-    @apply bg-[var(--glass-bg)] backdrop-blur-xl border border-[var(--glass-border)] rounded-2xl p-6;
+  .card-feature {
+    @apply bg-white rounded-[var(--radius)] shadow-[var(--shadow-card)] p-6 
+           transition-all duration-300 hover:shadow-[var(--shadow-card-hover)] hover:scale-[var(--scale-hover)];
   }
   
-  /* Section Layouts */
+  /* AIQRA Form Components */
+  .input-minimal {
+    @apply bg-[hsl(var(--input))] border-0 border-b-2 border-[hsl(var(--border))] 
+           rounded-none px-0 py-3 focus:border-[hsl(var(--primary))] transition-colors;
+  }
+  
+  .input-soft {
+    @apply bg-[hsl(var(--input))] border-0 rounded-lg px-4 py-3 
+           focus:ring-2 focus:ring-[hsl(var(--primary))] transition-all;
+  }
+  
+  /* Navigation Components */
+  .nav-link {
+    @apply relative text-[hsl(var(--foreground))] font-medium transition-colors duration-300
+           hover:text-[hsl(var(--primary))] 
+           after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 
+           after:bg-[hsl(var(--primary))] after:transition-all after:duration-300
+           hover:after:w-full;
+  }
+  
+  /* Layout Components */
   .section-padding {
-    @apply py-20 md:py-32;
+    @apply py-[var(--spacing-2xl)] md:py-24;
   }
   
   .container-custom {
-    @apply max-w-7xl mx-auto px-6 md:px-8;
+    @apply max-w-7xl mx-auto px-[var(--spacing-md)] md:px-[var(--spacing-lg)];
   }
   
-  /* Gradient Text */
-  .text-gradient {
-    @apply bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--secondary-brand))] bg-clip-text text-transparent;
+  /* AIQRA Brand Text */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--secondary-brand))] 
+           bg-clip-text text-transparent;
   }
   
-  /* Professional Animations */
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-[hsl(var(--accent-brand))] to-[hsl(var(--primary))] 
+           bg-clip-text text-transparent;
+  }
+  
+  /* Micro Animations */
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out;
   }
@@ -133,11 +228,16 @@
     animation: slideUp 0.8s ease-out;
   }
   
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-[var(--scale-hover)];
   }
 }
 
+/* AIQRA Keyframe Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -160,11 +260,20 @@
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 @keyframes glow {
   from {
-    box-shadow: 0 0 20px hsl(var(--primary-glow) / 0.3);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
   }
   to {
-    box-shadow: 0 0 40px hsl(var(--primary-glow) / 0.6);
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
   }
 }
