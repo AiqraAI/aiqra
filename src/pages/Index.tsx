@@ -15,28 +15,28 @@ const Index = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Agentic AI',
-      description: 'AI that acts with purpose — embodied intelligence that doesn\'t just think, but takes meaningful action.',
+      title: 'AI Innovation',
+      description: 'Creating AI agents that transform industries and empower companies.',
     },
     {
       icon: Cpu,
       title: 'Sovereign Technology',
-      description: 'Gulf-born robotics and AI solutions that combine cultural depth with cutting-edge global technology.',
+      description: 'GCC-born robotics and AI solutions combining cutting-edge technology with the best AI talent.',
     },
     {
       icon: Zap,
+      title: 'Innovation Leadership',
+      description: 'Trusted by public sector entities and enterprises in Europe and the GCC as the go-to AI and robotics partner.',
+    },
+    {
+      icon: Users,
       title: 'Women-Led Excellence',
       description: 'Top AI women leading breakthrough solutions with precision and mastery in everything we build.',
     },
     {
-      icon: Users,
+      icon: Globe,
       title: 'Gulf Empowerment',
       description: 'Creating opportunities for women and youth across the Gulf through world-class AI education and training.',
-    },
-    {
-      icon: Globe,
-      title: 'Regional Leadership',
-      description: 'Trusted by governments and enterprises across the Gulf as the go-to AI and robotics partner.',
     },
     {
       icon: TrendingUp,
@@ -57,13 +57,13 @@ const Index = () => {
       gradient: 'from-secondary-brand to-accent-brand',
     },
     {
-      name: 'Real Estate',
-      description: 'Smart property management and automated valuation systems',
+      name: 'AI-Powered Sales Lead Generator',
+      description: 'The AI agent that sells smarter, closes faster, and never stops.',
       gradient: 'from-accent-brand to-primary',
     },
     {
       name: 'Enterprise',
-      description: 'Custom AI solutions for business process automation and optimization',
+      description: 'Custom AI solutions for business process automation and optimization.',
       gradient: 'from-primary-light to-secondary-light',
     },
   ];
@@ -86,9 +86,9 @@ const Index = () => {
         <div className="relative z-10 container-custom text-center text-white">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold font-display mb-6 leading-tight">
-              Read the Future.
+              AI that Thinks, Talks
               <span className="block text-gradient bg-gradient-to-r from-secondary-brand to-accent-brand bg-clip-text text-transparent">
-                Create it with us.
+                and Transforms.
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
@@ -111,17 +111,7 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-secondary-brand mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-white/80 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+          {/* Remove stats section */}
         </div>
       </section>
 
@@ -168,11 +158,12 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {industries.map((industry, index) => (
-              <div
+              <Link
                 key={index}
-                className={`relative overflow-hidden rounded-2xl p-8 text-white bg-gradient-to-br ${industry.gradient} hover:scale-105 transition-all duration-300 cursor-pointer group`}
+                to="/solutions"
+                className={`relative overflow-hidden rounded-2xl p-8 text-white bg-gradient-to-br ${industry.gradient} hover:scale-105 transition-all duration-300 cursor-pointer group block`}
               >
                 <h3 className="text-2xl font-bold mb-4">{industry.name}</h3>
                 <p className="text-white/90 leading-relaxed mb-6">{industry.description}</p>
@@ -180,7 +171,7 @@ const Index = () => {
                   <span className="font-medium">Learn More</span>
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -193,7 +184,7 @@ const Index = () => {
             Ready to Shape the Future?
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Join the AIQRA.ai movement. Let's create agentic AI solutions that combine 
+            Join AIQRA today. Let's create agentic AI solutions that combine 
             Gulf vision with global excellence for your organization's future.
           </p>
           

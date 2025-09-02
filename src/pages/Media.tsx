@@ -245,82 +245,7 @@ const Media = () => {
         </div>
       </section>
 
-      {/* Recent Posts */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="flex flex-col lg:flex-row gap-12">
-            {/* Main Content */}
-            <div className="lg:w-2/3">
-              <h2 className="text-3xl font-bold mb-8">Recent Posts</h2>
-              
-              <div className="space-y-8">
-                {recentPosts.map((post, index) => (
-                  <div key={index} className="card-elegant group hover:scale-105">
-                    <div className="flex items-start justify-between mb-4">
-                      <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                        {post.category}
-                      </span>
-                      <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold mb-3 leading-tight">
-                      {post.title}
-                    </h3>
-                    
-                    <div className="flex items-center text-sm text-muted-foreground space-x-4">
-                      <div className="flex items-center">
-                        <User className="w-4 h-4 mr-2" />
-                        {post.author}
-                      </div>
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        {new Date(post.date).toLocaleDateString()}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {post.readTime}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-12 text-center">
-                <Button className="btn-secondary">
-                  Load More Articles
-                </Button>
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="lg:w-1/3">
-              <div className="card-elegant sticky top-24">
-                <h3 className="text-xl font-semibold mb-6">Categories</h3>
-                <div className="space-y-2">
-                  {categories.map((category, index) => (
-                    <button
-                      key={index}
-                      className="w-full text-left px-4 py-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary transition-all duration-200"
-                    >
-                      {category}
-                    </button>
-                  ))}
-                </div>
-
-                <div className="mt-8 pt-8 border-t border-border">
-                  <h4 className="font-semibold mb-4">Newsletter</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Subscribe to receive the latest AI and robotics insights directly to your inbox.
-                  </p>
-                  <Button className="btn-hero w-full">
-                    Subscribe Now
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Remove Recent Posts section */}
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-primary via-primary-light to-secondary-brand text-white">
@@ -334,7 +259,13 @@ const Media = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button 
+              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => {
+                // Mailchimp integration placeholder
+                console.log('Newsletter subscription - integrate with Mailchimp');
+              }}
+            >
               Subscribe to Newsletter
             </Button>
             <Link to="/contact">

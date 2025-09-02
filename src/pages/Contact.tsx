@@ -4,7 +4,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
-import { Mail, Phone, MapPin, Clock, Send, Building, Users, MessageSquare } from 'lucide-react';
+import { Send } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -17,30 +18,6 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: 'Email Us',
-      details: 'contact@aiqra.ai',
-      description: 'Get in touch for partnerships, inquiries, and collaboration opportunities.',
-      action: 'Send Email',
-    },
-    {
-      icon: Phone,
-      title: 'Call Us',
-      details: '+968 1234 5678',
-      description: 'Speak directly with our AI and robotics experts for immediate assistance.',
-      action: 'Call Now',
-    },
-    {
-      icon: MapPin,
-      title: 'Visit Us',
-      details: 'Muscat, Oman',
-      description: 'Tour our state-of-the-art AI and robotics development facility.',
-      action: 'Get Directions',
-    },
-  ];
-
   const inquiryTypes = [
     { value: 'partnership', label: 'Partnership Opportunities' },
     { value: 'solutions', label: 'AI & Robotics Solutions' },
@@ -49,23 +26,6 @@ const Contact = () => {
     { value: 'careers', label: 'Career Opportunities' },
     { value: 'support', label: 'Technical Support' },
     { value: 'other', label: 'Other' },
-  ];
-
-  const offices = [
-    {
-      title: 'Headquarters',
-      location: 'Muscat, Oman',
-      address: 'Al Khuwair, Muscat Governorate, Sultanate of Oman',
-      hours: 'Sunday - Thursday: 8:00 AM - 6:00 PM',
-      type: 'primary',
-    },
-    {
-      title: 'Regional Office',
-      location: 'Dubai, UAE',
-      address: 'Dubai Internet City, Dubai, United Arab Emirates',
-      hours: 'Sunday - Thursday: 9:00 AM - 5:00 PM',
-      type: 'regional',
-    },
   ];
 
   const handleInputChange = (field: string, value: string) => {
@@ -119,34 +79,8 @@ const Contact = () => {
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
               Ready to transform your business with AI and robotics? Let's discuss how 
-              AIQRA.ai can help you achieve your innovation goals.
+              AIQRA can help you achieve your innovation goals.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Info Cards */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {contactInfo.map((info, index) => {
-              const Icon = info.icon;
-              return (
-                <div key={index} className="card-elegant text-center group hover:scale-105">
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary-brand rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:animate-glow">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{info.title}</h3>
-                  <div className="text-2xl font-bold text-gradient mb-4">{info.details}</div>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {info.description}
-                  </p>
-                  <Button className="btn-secondary">
-                    {info.action}
-                  </Button>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
@@ -154,13 +88,13 @@ const Contact = () => {
       {/* Main Contact Section */}
       <section className="section-padding bg-gradient-subtle">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="max-w-2xl mx-auto">
             {/* Contact Form */}
             <div>
-              <h2 className="text-4xl font-bold font-display mb-6 text-gradient">
+              <h2 className="text-4xl font-bold font-display mb-6 text-gradient text-center">
                 Send Us a Message
               </h2>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-muted-foreground mb-8 text-center">
                 Fill out the form below and our team will get back to you within 24 hours.
               </p>
 
@@ -240,71 +174,11 @@ const Contact = () => {
                 </Button>
               </form>
             </div>
-
-            {/* Office Information */}
-            <div>
-              <h2 className="text-4xl font-bold font-display mb-6">
-                Our Offices
-              </h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Visit us at our state-of-the-art facilities or connect with our regional teams.
-              </p>
-
-              <div className="space-y-8">
-                {offices.map((office, index) => (
-                  <div key={index} className="card-elegant">
-                    <div className="flex items-start space-x-4">
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                        office.type === 'primary' 
-                          ? 'bg-gradient-to-r from-primary to-secondary-brand' 
-                          : 'bg-gradient-to-r from-secondary-brand to-accent-brand'
-                      }`}>
-                        <Building className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold mb-2">{office.title}</h3>
-                        <div className="text-lg font-medium text-primary mb-2">{office.location}</div>
-                        <div className="flex items-start mb-3">
-                          <MapPin className="w-4 h-4 text-muted-foreground mr-2 mt-1 flex-shrink-0" />
-                          <span className="text-muted-foreground">{office.address}</span>
-                        </div>
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 text-muted-foreground mr-2" />
-                          <span className="text-muted-foreground">{office.hours}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Quick Actions */}
-              <div className="mt-12">
-                <h3 className="text-2xl font-semibold mb-6">Quick Actions</h3>
-                <div className="space-y-4">
-                  <Button className="btn-secondary w-full justify-between group">
-                    <span className="flex items-center">
-                      <Users className="w-5 h-5 mr-3" />
-                      Schedule a Consultation
-                    </span>
-                    <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                  
-                  <Button className="btn-ghost w-full justify-between group">
-                    <span className="flex items-center">
-                      <MessageSquare className="w-5 h-5 mr-3" />
-                      Join Our Newsletter
-                    </span>
-                    <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Accordion */}
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
@@ -315,50 +189,45 @@ const Contact = () => {
               Common questions about our AI and robotics solutions, partnerships, and services.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-              {[
-                {
-                  question: "How long does it take to implement AI solutions?",
-                  answer: "Implementation timelines vary by project complexity, typically ranging from 3-6 months for standard solutions to 12+ months for custom enterprise systems."
-                },
-                {
-                  question: "Do you provide training and support?",
-                  answer: "Yes, we offer comprehensive training programs, ongoing technical support, and maintenance services for all our AI and robotics solutions."
-                },
-                {
-                  question: "Can you work with existing systems?",
-                  answer: "Absolutely. Our solutions are designed to integrate seamlessly with existing infrastructure and can be customized to work with your current systems."
-                },
-                {
-                  question: "What industries do you serve?",
-                  answer: "We serve telecommunications, education, real estate, healthcare, manufacturing, and various enterprise sectors across the Middle East and beyond."
-                }
-              ].map((faq, index) => (
-                <div key={index} className="card-elegant">
-                  <h4 className="font-semibold text-lg mb-3">{faq.question}</h4>
-                  <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
+            <Accordion type="single" collapsible className="text-left">
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-lg font-semibold">
+                  How long does it take to implement AI solutions?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Implementation timelines vary by project complexity, typically ranging from 3-6 months for standard solutions to 12+ months for custom enterprise systems.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-lg font-semibold">
+                  Do you provide training and support?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Yes, we offer comprehensive training programs, ongoing technical support, and maintenance services for all our AI and robotics solutions.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-lg font-semibold">
+                  Can you work with existing systems?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Absolutely. Our solutions are designed to integrate seamlessly with existing infrastructure and can be customized to work with your current systems.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger className="text-lg font-semibold">
+                  What industries do you serve?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  We serve telecommunications, education, real estate, healthcare, manufacturing, and various enterprise sectors across the Middle East and beyond.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
 
-      {/* Map Section - Placeholder */}
-      <section className="py-16 bg-gradient-subtle">
-        <div className="container-custom">
-          <div className="card-elegant">
-            <h3 className="text-2xl font-semibold mb-6 text-center">Find Us</h3>
-            <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary-brand/10 rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
-                <p className="text-muted-foreground">Interactive map coming soon</p>
-                <p className="text-sm text-muted-foreground">Al Khuwair, Muscat, Oman</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Remove map section */}
     </div>
   );
 };

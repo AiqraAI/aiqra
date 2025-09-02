@@ -66,8 +66,7 @@ const About = () => {
               <span className="block text-secondary-brand">AI Powerhouse</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              AIQRA.ai creates agentic intelligence that doesn't just think — it acts. 
-              Born from the Arabic "Iqra" (اقرأ) meaning "read," we command knowledge to create the future.
+              AIQRA creates agentic intelligence that doesn't just think — it acts.
             </p>
           </div>
         </div>

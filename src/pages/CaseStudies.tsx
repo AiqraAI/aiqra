@@ -11,12 +11,12 @@ const CaseStudies = () => {
       industry: 'Telecommunications',
       challenge: 'Manual network monitoring led to 40% more downtime and increased operational costs across 500+ cell towers.',
       solution: 'Deployed AI-powered predictive maintenance system with real-time network analysis and automated optimization protocols.',
-      results: [
-        '65% reduction in network downtime',
-        '40% decrease in operational costs',
-        '85% faster issue detection and resolution',
-        '300% improvement in customer satisfaction scores'
-      ],
+        results: [
+          '67% reduction in network downtime',
+          '43% decrease in operational costs',
+          '97.2% faster issue detection and resolution',
+          '100% improvement in customer satisfaction scores'
+        ],
       metrics: {
         efficiency: '65%',
         cost_savings: '$2.3M',
@@ -64,6 +64,26 @@ const CaseStudies = () => {
       },
       gradient: 'from-accent-brand to-primary',
       icon: Zap
+    },
+    {
+      title: 'Enterprise Business Process Automation',
+      client: 'Fortune 500 Company',
+      industry: 'Enterprise',
+      challenge: 'Manual business processes across multiple departments caused inefficiencies and increased operational costs.',
+      solution: 'Deployed comprehensive AI-powered business process automation platform with intelligent workflow optimization.',
+      results: [
+        '75% reduction in processing time',
+        '90% decrease in manual errors',
+        '60% improvement in operational efficiency',
+        '200% ROI within first year'
+      ],
+      metrics: {
+        efficiency: '75%',
+        cost_savings: '$3.2M',
+        roi: '200%'
+      },
+      gradient: 'from-primary-light to-secondary-light',
+      icon: Trophy
     }
   ];
 
@@ -99,8 +119,8 @@ const CaseStudies = () => {
               <span className="block text-secondary-brand">Stories</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Discover how AIQRA.ai's AI and robotics solutions have transformed businesses 
-              across the Middle East, delivering measurable results and competitive advantages.
+              Discover how AIQRA's AI and robotics solutions have transformed businesses 
+              in Europe and the Middle East, delivering measurable results and competitive advantages.
             </p>
           </div>
         </div>
@@ -192,45 +212,13 @@ const CaseStudies = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="section-padding bg-gradient-subtle">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 text-gradient">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Hear directly from the leaders who have experienced the transformational 
-              impact of AIQRA.ai's AI and robotics solutions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="card-elegant group hover:scale-105">
-                <div className="mb-6">
-                  <div className="text-4xl text-primary mb-4">"</div>
-                  <p className="text-muted-foreground leading-relaxed italic">
-                    {testimonial.quote}
-                  </p>
-                </div>
-                
-                <div className="pt-4 border-t border-border">
-                  <div className="font-semibold text-foreground">{testimonial.author}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.position}</div>
-                  <div className="text-sm text-primary font-medium">{testimonial.company}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Remove Testimonials section */}
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-primary via-primary-light to-secondary-brand text-white">
         <div className="container-custom text-center">
           <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">
-            Ready for Your Success Story?
+            Ready for Your AI Success Story?
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
             Join the organizations already experiencing transformational results with 
