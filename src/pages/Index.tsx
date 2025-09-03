@@ -100,6 +100,19 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-primary/60 to-transparent" />
         </div>
 
+        {/* Robot Animation */}
+        {robotAnimationData && (
+          <div className="absolute top-[58px] right-[58px] animate-fade-in z-20">
+            <Lottie
+              lottieRef={lottieRef}
+              animationData={robotAnimationData}
+              loop={false}
+              autoplay={false}
+              className="w-[200px] h-auto max-w-[150px] md:max-w-[200px]"
+            />
+          </div>
+        )}
+
         {/* Hero Content */}
         <div className="relative z-10 container-custom text-center text-white">
           <div className="animate-fade-in">
@@ -109,19 +122,6 @@ const Index = () => {
                 and Transforms.
               </span>
             </h1>
-            
-            {/* Robot Animation */}
-            {robotAnimationData && (
-              <div className="absolute top-[58px] right-[58px] animate-fade-in z-20">
-                <Lottie
-                  lottieRef={lottieRef}
-                  animationData={robotAnimationData}
-                  loop={false}
-                  autoplay={false}
-                  className="w-[200px] h-auto max-w-[150px] md:max-w-[200px]"
-                />
-              </div>
-            )}
             
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">AIQRA is a women-led, Gulf-born AI and robotics powerhouse creating agentic intelligence that doesn't just think — it acts. From the Gulf to the world, we lead sovereign technology innovation.</p>
             
