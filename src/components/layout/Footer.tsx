@@ -139,7 +139,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-white/20 pt-8 mt-12 text-center">
           <p className="text-white/60">
-            © {new Date().getFullYear()} AIQRA.ai. All rights reserved. Innovating the future of AI and robotics.
+            © {new Date().getFullYear()} AIQRA. All rights reserved. Innovating the future of AI and robotics.
           </p>
         </div>
       </div>
