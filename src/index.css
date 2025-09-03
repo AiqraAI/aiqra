@@ -219,22 +219,33 @@
            bg-clip-text text-transparent;
   }
   
-  /* Micro Animations */
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
-  }
-  
-  .animate-slide-up {
-    animation: slideUp 0.8s ease-out;
-  }
-  
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-  
-  .hover-scale {
-    @apply transition-transform duration-300 hover:scale-[var(--scale-hover)];
-  }
+/* Enhanced animations for interactions */
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.btn-hero {
+  @apply bg-gradient-to-r from-primary to-secondary-brand text-white font-bold px-8 py-4 
+         rounded-[var(--radius-button)] transition-all duration-300 hover:shadow-2xl 
+         hover:scale-105 uppercase text-[var(--text-button)] relative overflow-hidden;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-primary via-secondary-brand to-accent-brand 
+         bg-clip-text text-transparent;
+}
+
+.bg-gradient-subtle {
+  background: linear-gradient(135deg, 
+    hsl(var(--background)) 0%, 
+    hsl(var(--secondary) / 0.3) 50%, 
+    hsl(var(--background)) 100%);
+}
+
+/* Pulse animation for gradient texts */
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 }
 
 /* AIQRA Keyframe Animations */

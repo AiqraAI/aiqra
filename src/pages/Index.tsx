@@ -4,9 +4,15 @@ import { ArrowRight, Brain, Cpu, Zap, Users, Globe, TrendingUp } from 'lucide-re
 import { Link } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import heroImage from '@/assets/hero-ai-robotics.jpg';
+import AnimatedStats from '@/components/interactive/AnimatedStats';
+import FloatingElements from '@/components/interactive/FloatingElements';
+import InteractiveFeatureCard from '@/components/interactive/InteractiveFeatureCard';
+import ScrollProgressBar from '@/components/interactive/ScrollProgressBar';
+import { useParallax } from '@/hooks/useScrollAnimation';
 const Index = () => {
   const lottieRef = useRef<any>(null);
   const [robotAnimationData, setRobotAnimationData] = React.useState(null);
+  const parallaxOffset = useParallax(0.3);
   useEffect(() => {
     // Load the animation JSON
     fetch('/RobotSaludando.json').then(response => response.json()).then(data => setRobotAnimationData(data)).catch(error => console.error('Error loading animation:', error));
@@ -83,13 +89,23 @@ const Index = () => {
     gradient: 'from-primary-light to-secondary-light'
   }];
   return <div className="min-h-screen">
+      <ScrollProgressBar />
+      
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with Parallax */}
         <div className="absolute inset-0 z-0">
-          <img src={heroImage} alt="AIQRA.ai - Advanced AI and Robotics Technology" className="w-full h-full object-cover" />
+          <img 
+            src={heroImage} 
+            alt="AIQRA.ai - Advanced AI and Robotics Technology" 
+            className="w-full h-full object-cover"
+            style={{ transform: `translateY(${parallaxOffset}px)` }}
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-primary/60 to-transparent" />
         </div>
+
+        {/* Floating Elements */}
+        <FloatingElements />
 
         {/* Robot Animation */}
         {robotAnimationData && <div className="absolute top-[58px] right-[20px] animate-fade-in z-20">
@@ -99,36 +115,44 @@ const Index = () => {
         {/* Hero Content */}
         <div className="relative z-10 container-custom text-center text-white">
           <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold font-display mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold font-display mb-6 leading-tight hover:scale-105 transition-transform duration-500">
               AI that Thinks, Talks
-              <span className="block text-gradient bg-gradient-to-r from-secondary-brand to-accent-brand bg-clip-text text-transparent">
+              <span className="block text-gradient bg-gradient-to-r from-secondary-brand to-accent-brand bg-clip-text text-transparent animate-pulse">
                 and Transforms.
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-zinc-50">AIQRA - We are the AI and robotics powerhouse creating agentic intelligence that thinks and acts. From the Gulf to the world, we lead sovereign technology innovation.</p>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-zinc-50 opacity-0 animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
+              AIQRA - We are the AI and robotics powerhouse creating agentic intelligence that thinks and acts. From the Gulf to the world, we lead sovereign technology innovation.
+            </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center opacity-0 animate-slide-up" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
               <Link to="/solutions">
-                <Button className="btn-hero group">
-                  Explore Solutions
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <Button className="btn-hero group relative overflow-hidden">
+                  <span className="relative z-10">Explore Solutions</span>
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+                  <div className="absolute inset-0 bg-white/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button className="btn-secondary bg-white/10 border-white text-white hover:bg-white hover:text-primary">
-                  Partner with Us
+                <Button className="btn-secondary bg-white/10 border-white text-white hover:bg-white hover:text-primary group relative overflow-hidden">
+                  <span className="relative z-10">Partner with Us</span>
+                  <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  <span className="absolute inset-0 flex items-center justify-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Partner with Us
+                  </span>
                 </Button>
               </Link>
             </div>
           </div>
-
-          {/* Remove stats section */}
         </div>
       </section>
 
+      {/* Animated Stats Section */}
+      <AnimatedStats stats={stats} />
+
       {/* Features Section */}
-      <section className="section-padding bg-gradient-subtle">
+      <section className="section-padding bg-gradient-subtle relative overflow-hidden">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 text-gradient">Why AIQRA Leads</h2>
@@ -139,16 +163,15 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return <div key={index} className="card-elegant hover:scale-105 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary-brand rounded-xl flex items-center justify-center mb-6 group-hover:animate-glow">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                </div>;
-          })}
+            {features.map((feature, index) => (
+              <InteractiveFeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                index={index}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -167,22 +190,50 @@ const Index = () => {
           </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industries.map((industry, index) => <Link key={index} to="/solutions" className={`relative overflow-hidden rounded-2xl p-8 text-white bg-gradient-to-br ${industry.gradient} hover:scale-105 transition-all duration-300 cursor-pointer group block`}>
-                <h3 className="text-2xl font-bold mb-4">{industry.name}</h3>
-                <p className="text-white/90 leading-relaxed mb-6">{industry.description}</p>
-                <div className="flex items-center text-white/80 group-hover:text-white transition-colors">
-                  <span className="font-medium">Learn More</span>
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            {industries.map((industry, index) => 
+              <Link 
+                key={index} 
+                to="/solutions" 
+                className={`relative overflow-hidden rounded-2xl p-8 text-white bg-gradient-to-br ${industry.gradient} hover:scale-105 transition-all duration-500 cursor-pointer group block transform hover:rotate-1`}
+              >
+                {/* Interactive glow effect */}
+                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                {/* Animated border */}
+                <div className="absolute inset-0 rounded-2xl border-2 border-white/20 group-hover:border-white/40 transition-all duration-500" />
+                
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-yellow-100 transition-colors duration-300">
+                    {industry.name}
+                  </h3>
+                  <p className="text-white/90 leading-relaxed mb-6 group-hover:text-white transition-colors duration-300">
+                    {industry.description}
+                  </p>
+                  <div className="flex items-center text-white/80 group-hover:text-white transition-all duration-300">
+                    <span className="font-medium">Learn More</span>
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" />
+                  </div>
                 </div>
-              </Link>)}
+                
+                {/* Floating particles on hover */}
+                <div className="absolute top-4 right-4 w-2 h-2 bg-white/40 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300" />
+                <div className="absolute bottom-6 left-6 w-1 h-1 bg-white/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300" style={{ animationDelay: '0.5s' }} />
+              </Link>
+            )}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary via-primary-light to-secondary-brand text-white">
-        <div className="container-custom text-center">
-          <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">
+      <section className="section-padding bg-gradient-to-r from-primary via-primary-light to-secondary-brand text-white relative overflow-hidden">
+        {/* Interactive background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent-brand/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }} />
+        </div>
+        
+        <div className="container-custom text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 hover:scale-105 transition-transform duration-300">
             Ready to Shape the Future?
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
@@ -192,13 +243,15 @@ const Index = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link to="/contact">
-              <Button className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                Start Your Journey
+              <Button className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
+                <span className="relative z-10">Start Your Journey</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary-brand/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
               </Button>
             </Link>
             <Link to="/case-studies">
-              <Button className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 rounded-xl transition-all duration-300">
-                View Success Stories
+              <Button className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 rounded-xl transition-all duration-300 group relative overflow-hidden">
+                <span className="relative z-10 group-hover:text-primary transition-colors duration-300">View Success Stories</span>
+                <div className="absolute inset-0 bg-white transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom" />
               </Button>
             </Link>
           </div>
