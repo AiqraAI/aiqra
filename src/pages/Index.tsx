@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Brain, Cpu, Zap, Users, Globe, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Lottie from 'lottie-react';
 import heroImage from '@/assets/hero-ai-robotics.jpg';
+
 const Index = () => {
+  const lottieRef = useRef<any>(null);
+  const [robotAnimationData, setRobotAnimationData] = React.useState(null);
+
+  useEffect(() => {
+    // Load the animation JSON
+    fetch('/RobotSaludando.json')
+      .then(response => response.json())
+      .then(data => setRobotAnimationData(data))
+      .catch(error => console.error('Error loading animation:', error));
+  }, []);
+
+  useEffect(() => {
+    const setupAnimation = () => {
+      if (lottieRef.current && robotAnimationData) {
+        // Play once on load, then set up interval for looping every 12 seconds
+        lottieRef.current.play();
+        
+        const interval = setInterval(() => {
+          lottieRef.current?.play();
+        }, 12000);
+
+        return () => clearInterval(interval);
+      }
+    };
+
+    if (robotAnimationData) {
+      const timer = setTimeout(setupAnimation, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [robotAnimationData]);
   const stats = [{
     number: '50+',
     label: 'AI Solutions Deployed'
@@ -77,6 +109,20 @@ const Index = () => {
                 and Transforms.
               </span>
             </h1>
+            
+            {/* Robot Animation */}
+            {robotAnimationData && (
+              <div className="flex justify-center mb-8 animate-fade-in">
+                <Lottie
+                  lottieRef={lottieRef}
+                  animationData={robotAnimationData}
+                  loop={false}
+                  autoplay={false}
+                  className="w-[200px] h-auto max-w-[150px] md:max-w-[200px]"
+                />
+              </div>
+            )}
+            
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">AIQRA is a women-led, Gulf-born AI and robotics powerhouse creating agentic intelligence that doesn't just think — it acts. From the Gulf to the world, we lead sovereign technology innovation.</p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up">
