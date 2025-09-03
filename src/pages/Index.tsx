@@ -102,7 +102,7 @@ const Index = () => {
 
         {/* Robot Animation */}
         {robotAnimationData && (
-          <div className="absolute top-[58px] right-[58px] animate-fade-in z-20">
+          <div className="absolute top-[58px] right-[20px] animate-fade-in z-20">
             <Lottie
               lottieRef={lottieRef}
               animationData={robotAnimationData}
