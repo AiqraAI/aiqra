@@ -4,33 +4,24 @@ import { ArrowRight, Brain, Cpu, Zap, Users, Globe, TrendingUp } from 'lucide-re
 import { Link } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import heroImage from '@/assets/hero-ai-robotics.jpg';
-
 const Index = () => {
   const lottieRef = useRef<any>(null);
   const [robotAnimationData, setRobotAnimationData] = React.useState(null);
-
   useEffect(() => {
     // Load the animation JSON
-    fetch('/RobotSaludando.json')
-      .then(response => response.json())
-      .then(data => setRobotAnimationData(data))
-      .catch(error => console.error('Error loading animation:', error));
+    fetch('/RobotSaludando.json').then(response => response.json()).then(data => setRobotAnimationData(data)).catch(error => console.error('Error loading animation:', error));
   }, []);
-
   useEffect(() => {
     const setupAnimation = () => {
       if (lottieRef.current && robotAnimationData) {
         // Play once on load, then set up interval for looping every 12 seconds
         lottieRef.current.play();
-        
         const interval = setInterval(() => {
           lottieRef.current?.play();
         }, 12000);
-
         return () => clearInterval(interval);
       }
     };
-
     if (robotAnimationData) {
       const timer = setTimeout(setupAnimation, 500);
       return () => clearTimeout(timer);
@@ -101,17 +92,9 @@ const Index = () => {
         </div>
 
         {/* Robot Animation */}
-        {robotAnimationData && (
-          <div className="absolute top-[58px] right-[20px] animate-fade-in z-20">
-            <Lottie
-              lottieRef={lottieRef}
-              animationData={robotAnimationData}
-              loop={false}
-              autoplay={false}
-              className="w-[200px] h-auto max-w-[150px] md:max-w-[200px]"
-            />
-          </div>
-        )}
+        {robotAnimationData && <div className="absolute top-[58px] right-[20px] animate-fade-in z-20">
+            <Lottie lottieRef={lottieRef} animationData={robotAnimationData} loop={false} autoplay={false} className="w-[200px] h-auto max-w-[150px] md:max-w-[200px]" />
+          </div>}
 
         {/* Hero Content */}
         <div className="relative z-10 container-custom text-center text-white">
@@ -123,7 +106,7 @@ const Index = () => {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">AIQRA is a women-led, Gulf-born AI and robotics powerhouse creating agentic intelligence that doesn't just think — it acts. From the Gulf to the world, we lead sovereign technology innovation.</p>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-zinc-50">AIQRA - We are the AI and robotics powerhouse creating agentic intelligence that thinks and acts. From the Gulf to the world, we lead sovereign technology innovation.</p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up">
               <Link to="/solutions">
