@@ -3,82 +3,68 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Brain, Cpu, Zap, Users, Globe, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-ai-robotics.jpg';
-
 const Index = () => {
-  const stats = [
-    { number: '50+', label: 'AI Solutions Deployed' },
-    { number: '15+', label: 'Industry Partners' },
-    { number: '100+', label: 'Interns Trained' },
-    { number: '3', label: 'Countries Served' },
-  ];
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI Innovation',
-      description: 'Creating AI agents that transform industries and empower companies.',
-    },
-    {
-      icon: Cpu,
-      title: 'Sovereign Technology',
-      description: 'GCC-born robotics and AI solutions combining cutting-edge technology with the best AI talent.',
-    },
-    {
-      icon: Zap,
-      title: 'Innovation Leadership',
-      description: 'Trusted by public sector entities and enterprises in Europe and the GCC as the go-to AI and robotics partner.',
-    },
-    {
-      icon: Users,
-      title: 'Women-Led Excellence',
-      description: 'Top AI women leading breakthrough solutions with precision and mastery in everything we build.',
-    },
-    {
-      icon: Globe,
-      title: 'Gulf Empowerment',
-      description: 'Creating opportunities for women and youth across the Gulf through world-class AI education and training.',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Future Vision',
-      description: 'Seeing what others don\'t, building what others can\'t — setting the standard for AI in the region.',
-    },
-  ];
-
-  const industries = [
-    {
-      name: 'Telecommunications',
-      description: 'AI-powered network optimization and customer service automation',
-      gradient: 'from-primary to-secondary-brand',
-    },
-    {
-      name: 'Education',
-      description: 'Intelligent learning systems and educational robotics platforms',
-      gradient: 'from-secondary-brand to-accent-brand',
-    },
-    {
-      name: 'AI-Powered Sales Lead Generator',
-      description: 'The AI agent that sells smarter, closes faster, and never stops.',
-      gradient: 'from-accent-brand to-primary',
-    },
-    {
-      name: 'Enterprise',
-      description: 'Custom AI solutions for business process automation and optimization.',
-      gradient: 'from-primary-light to-secondary-light',
-    },
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const stats = [{
+    number: '50+',
+    label: 'AI Solutions Deployed'
+  }, {
+    number: '15+',
+    label: 'Industry Partners'
+  }, {
+    number: '100+',
+    label: 'Interns Trained'
+  }, {
+    number: '3',
+    label: 'Countries Served'
+  }];
+  const features = [{
+    icon: Brain,
+    title: 'AI Innovation',
+    description: 'Creating AI agents that transform industries and empower companies.'
+  }, {
+    icon: Cpu,
+    title: 'Sovereign Technology',
+    description: 'GCC-born robotics and AI solutions combining cutting-edge technology with the best AI talent.'
+  }, {
+    icon: Zap,
+    title: 'Innovation Leadership',
+    description: 'Trusted by public sector entities and enterprises in Europe and the GCC as the go-to AI and robotics partner.'
+  }, {
+    icon: Users,
+    title: 'Women-Led Excellence',
+    description: 'Top AI women leading breakthrough solutions with precision and mastery in everything we build.'
+  }, {
+    icon: Globe,
+    title: 'Gulf Empowerment',
+    description: 'Creating opportunities for women and youth across the Gulf through world-class AI education and training.'
+  }, {
+    icon: TrendingUp,
+    title: 'Future Vision',
+    description: 'Seeing what others don\'t, building what others can\'t — setting the standard for AI in the region.'
+  }];
+  const industries = [{
+    name: 'Telecommunications',
+    description: 'AI-powered network optimization and customer service automation',
+    gradient: 'from-primary to-secondary-brand'
+  }, {
+    name: 'Education',
+    description: 'Intelligent learning systems and educational robotics platforms',
+    gradient: 'from-secondary-brand to-accent-brand'
+  }, {
+    name: 'AI-Powered Sales Lead Generator',
+    description: 'The AI agent that sells smarter, closes faster, and never stops.',
+    gradient: 'from-accent-brand to-primary'
+  }, {
+    name: 'Enterprise',
+    description: 'Custom AI solutions for business process automation and optimization.',
+    gradient: 'from-primary-light to-secondary-light'
+  }];
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="AIQRA.ai - Advanced AI and Robotics Technology"
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="AIQRA.ai - Advanced AI and Robotics Technology" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-primary/60 to-transparent" />
         </div>
 
@@ -91,10 +77,7 @@ const Index = () => {
                 and Transforms.
               </span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-              AIQRA.ai is a women-led, Gulf-born AI and robotics powerhouse creating agentic intelligence 
-              that doesn't just think — it acts. From the Gulf to the world, we lead sovereign technology innovation.
-            </p>
+            <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">AIQRA is a women-led, Gulf-born AI and robotics powerhouse creating agentic intelligence that doesn't just think — it acts. From the Gulf to the world, we lead sovereign technology innovation.</p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up">
               <Link to="/solutions">
@@ -119,9 +102,7 @@ const Index = () => {
       <section className="section-padding bg-gradient-subtle">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 text-gradient">
-              Why AIQRA.ai Leads
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 text-gradient">Why AIQRA Leads</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We're not just a company — we're a movement. Women-led innovation meets Gulf vision, 
               creating agentic AI solutions that transform industries and empower communities.
@@ -130,17 +111,15 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="card-elegant hover:scale-105 group">
+            const Icon = feature.icon;
+            return <div key={index} className="card-elegant hover:scale-105 group">
                   <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary-brand rounded-xl flex items-center justify-center mb-6 group-hover:animate-glow">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -159,20 +138,14 @@ const Index = () => {
           </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industries.map((industry, index) => (
-              <Link
-                key={index}
-                to="/solutions"
-                className={`relative overflow-hidden rounded-2xl p-8 text-white bg-gradient-to-br ${industry.gradient} hover:scale-105 transition-all duration-300 cursor-pointer group block`}
-              >
+            {industries.map((industry, index) => <Link key={index} to="/solutions" className={`relative overflow-hidden rounded-2xl p-8 text-white bg-gradient-to-br ${industry.gradient} hover:scale-105 transition-all duration-300 cursor-pointer group block`}>
                 <h3 className="text-2xl font-bold mb-4">{industry.name}</h3>
                 <p className="text-white/90 leading-relaxed mb-6">{industry.description}</p>
                 <div className="flex items-center text-white/80 group-hover:text-white transition-colors">
                   <span className="font-medium">Learn More</span>
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </Link>
-            ))}
+              </Link>)}
           </div>
         </div>
       </section>
@@ -202,8 +175,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
