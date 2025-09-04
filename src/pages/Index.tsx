@@ -148,8 +148,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Animated Stats Section */}
-      <AnimatedStats stats={stats} />
 
       {/* Features Section */}
       <section className="section-padding bg-gradient-subtle relative overflow-hidden">
@@ -157,8 +155,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 text-gradient">Why AIQRA Leads</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We're not just a company — we're a movement. Women-led innovation meets Gulf vision, 
-              creating agentic AI solutions that transform industries and empower communities.
+              AI innovation creating AI agents that transform industries and empower companies.
             </p>
           </div>
 

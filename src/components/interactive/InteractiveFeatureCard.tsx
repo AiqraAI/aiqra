@@ -63,10 +63,6 @@ const InteractiveFeatureCard: React.FC<InteractiveFeatureCardProps> = ({
             {description}
           </p>
 
-          {/* Interactive border effect */}
-          <div className={`absolute inset-0 rounded-[var(--radius)] border-2 border-primary/20 transition-all duration-500 ${
-            isHovered ? 'border-primary/40 shadow-lg' : 'border-transparent'
-          }`} />
         </div>
       </div>
     </div>

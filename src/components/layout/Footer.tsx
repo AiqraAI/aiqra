@@ -9,12 +9,6 @@ const Footer = () => {
     }, {
       name: 'Solutions',
       href: '/solutions'
-    }, {
-      name: 'Case Studies',
-      href: '/case-studies'
-    }, {
-      name: 'Media & Insights',
-      href: '/media'
     }],
     opportunities: [{
       name: 'Internships',
@@ -58,11 +52,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-secondary-brand to-accent-brand rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
-              </div>
-              <span className="text-2xl font-display font-bold">AIQRA</span>
+            <Link to="/" className="flex items-center mb-6">
+              <span className="text-2xl font-display font-bold text-white">AIQRA</span>
             </Link>
             <p className="text-white/80 mb-6 leading-relaxed">
               Leading the future of AI and robotics innovation. Transforming industries through 
@@ -74,10 +65,6 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-secondary-brand" />
                 <span className="text-white/80">contact@aiqra.ai</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-secondary-brand" />
-                <span className="text-white/80">+968 1234 5678</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-secondary-brand" />
