@@ -28,7 +28,7 @@ const Solutions = () => {
             <div className="card-elegant">
               <h3 className="text-2xl font-bold mb-4 text-primary">PrimeLead</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Your sales AI. Qualifies leads, scores intent, syncs to CRM — instantly.
+                Close deals faster. AI that finds, scores, and sends the hottest leads straight to your CRM.
               </p>
             </div>
 
@@ -36,7 +36,7 @@ const Solutions = () => {
             <div className="card-elegant">
               <h3 className="text-2xl font-bold mb-4 text-secondary-brand">Velocity</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Your email AI. Replies at human level, in English or Arabic, across Gmail & Outlook.
+                Never type another reply. Your AI inbox assistant writes human-level emails in English & Arabic — instantly.
               </p>
             </div>
 
@@ -44,7 +44,7 @@ const Solutions = () => {
             <div className="card-elegant">
               <h3 className="text-2xl font-bold mb-4 text-accent-brand">Project Pulse</h3>
               <p className="text-muted-foreground leading-relaxed">
-                The world's first open-source tactile robotics library. Feed your machines real-world senses. Robotics solutions and smart sensing agents — ready for you.
+                Give robots a sense of touch. The first open-source tactile AI library powering smarter machines today.
               </p>
             </div>
           </div>

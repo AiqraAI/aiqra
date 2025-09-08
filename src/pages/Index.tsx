@@ -53,7 +53,7 @@ const Index = () => {
   }, {
     icon: Cpu,
     title: 'Sovereign Technology',
-    description: 'GCC-born robotics and AI solutions combining cutting-edge technology with the best AI talent.'
+    description: 'GCC-born robotics + AI powered by world-class talent.'
   }, {
     icon: Zap,
     title: 'Innovation Leadership',
@@ -107,42 +107,56 @@ const Index = () => {
         {/* Floating Elements */}
         <FloatingElements />
 
-        {/* Robot Animation */}
-        {robotAnimationData && <div className="absolute top-[58px] right-[20px] animate-fade-in z-20">
-            <Lottie lottieRef={lottieRef} animationData={robotAnimationData} loop={false} autoplay={false} className="w-[200px] h-auto max-w-[150px] md:max-w-[200px]" />
-          </div>}
+        {/* Hero Content - Flex layout for desktop positioning */}
+        <div className="relative z-10 container-custom text-white flex items-center justify-center min-h-[70vh]">
+          <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl mx-auto">
+            
+            {/* Robot Animation - Left side on desktop, top on mobile */}
+            {robotAnimationData && (
+              <div className="lg:flex-shrink-0 lg:mr-12 mb-8 lg:mb-0 order-1 lg:order-1 animate-fade-in">
+                <Lottie 
+                  lottieRef={lottieRef} 
+                  animationData={robotAnimationData} 
+                  loop={false} 
+                  autoplay={false} 
+                  className="w-[180px] h-auto max-w-[140px] md:max-w-[180px] lg:max-w-[220px]" 
+                />
+              </div>
+            )}
 
-        {/* Hero Content */}
-        <div className="relative z-10 container-custom text-center text-white">
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold font-display mb-6 leading-tight hover:scale-105 transition-transform duration-500">
-              AI that Thinks, Talks
-              <span className="block text-gradient bg-gradient-to-r from-secondary-brand to-accent-brand bg-clip-text text-transparent animate-pulse">
-                and Transforms.
-              </span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-zinc-50 opacity-0 animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
-              AIQRA - We are the AI and robotics powerhouse creating agentic intelligence that thinks and acts. From the Gulf to the world, we lead sovereign technology innovation.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center opacity-0 animate-slide-up" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-              <Link to="/solutions">
-                <Button className="btn-hero group relative overflow-hidden">
-                  <span className="relative z-10">Explore Solutions</span>
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
-                  <div className="absolute inset-0 bg-white/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button className="btn-secondary bg-white/10 border-white text-white hover:bg-white hover:text-primary group relative overflow-hidden">
-                  <span className="relative z-10">Partner with Us</span>
-                  <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                  <span className="absolute inset-0 flex items-center justify-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Partner with Us
+            {/* Centered Main Content */}
+            <div className="flex-1 text-center lg:text-left order-2 lg:order-2">
+              <div className="animate-fade-in">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display mb-6 leading-tight hover:scale-105 transition-transform duration-500">
+                  AI that Thinks, Talks
+                  <span className="block text-gradient bg-gradient-to-r from-secondary-brand to-accent-brand bg-clip-text text-transparent animate-pulse">
+                    and Transforms.
                   </span>
-                </Button>
-              </Link>
+                </h1>
+                
+                <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl lg:max-w-2xl mx-auto lg:mx-0 leading-relaxed text-zinc-50 opacity-0 animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
+                  AIQRA - We are the AI and robotics powerhouse creating agentic intelligence that thinks and acts. From the Gulf to the world, we lead sovereign technology innovation.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center opacity-0 animate-slide-up" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
+                  <Link to="/solutions">
+                    <Button className="btn-hero group relative overflow-hidden">
+                      <span className="relative z-10">Explore Solutions</span>
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+                      <div className="absolute inset-0 bg-white/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+                    </Button>
+                  </Link>
+                  <Link to="/contact">
+                    <Button className="btn-secondary bg-white/10 border-white text-white hover:bg-white hover:text-primary group relative overflow-hidden">
+                      <span className="relative z-10">Partner with Us</span>
+                      <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      <span className="absolute inset-0 flex items-center justify-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        Partner with Us
+                      </span>
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
