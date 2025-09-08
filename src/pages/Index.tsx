@@ -259,12 +259,6 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary-brand/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
               </Button>
             </Link>
-            <Link to="/case-studies">
-              <Button className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 rounded-xl transition-all duration-300 group relative overflow-hidden">
-                <span className="relative z-10 group-hover:text-primary transition-colors duration-300">View Success Stories</span>
-                <div className="absolute inset-0 bg-white transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>

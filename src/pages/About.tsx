@@ -90,7 +90,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-primary">Velocity</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Your email AI. Replies at human level, in English or Arabic, across Gmail & Outlook with intelligent automation.
+                  Never type another reply. Your AI inbox assistant writes human-level emails in English & Arabic — instantly.
                 </p>
               </CardContent>
             </Card>
@@ -103,7 +103,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-secondary-brand">PrimeLead</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  AI sales lead generator. Qualifies leads, scores intent, syncs to CRM — instantly with precision targeting.
+                  Close deals faster. AI that finds, scores, and sends the hottest leads straight to your CRM.
                 </p>
               </CardContent>
             </Card>
@@ -116,7 +116,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-accent-brand">Project Pulse</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  The world's first open-source tactile robotics library. Feed your machines real-world senses.
+                  Give robots a sense of touch. The first open-source tactile AI library powering smarter machines today.
                 </p>
               </CardContent>
             </Card>

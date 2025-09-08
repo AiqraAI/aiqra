@@ -39,9 +39,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button className="btn-hero">
-              Partner with Us
-            </Button>
+            <Link to="/contact">
+              <Button className="btn-hero">
+                Partner with Us
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -57,9 +59,11 @@ const Header = () => {
                   {item.name}
                 </Link>)}
               <div className="pt-4 px-4">
-                <Button className="btn-hero w-full">
-                  Partner with Us
-                </Button>
+                <Link to="/contact">
+                  <Button className="btn-hero w-full">
+                    Partner with Us
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>}
