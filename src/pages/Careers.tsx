@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Code, Brain, Users, TrendingUp } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const Careers = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    career_track: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const careerTracks = [
     {
       title: 'Cloud Engineering',
@@ -38,6 +46,53 @@ const Careers = () => {
       gradient: 'from-primary-light to-secondary-light',
     },
   ];
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.name || !formData.email || !formData.career_track) {
+      toast({
+        title: "Form Validation Error",
+        description: "Please fill in all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    setIsSubmitting(true);
+
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      toast({
+        title: "Application Submitted Successfully!",
+        description: "Thank you for your interest in AIQRA careers. We'll be in touch soon.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        career_track: ''
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit application. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen">
@@ -125,28 +180,41 @@ const Careers = () => {
           </p>
           
           <div className="max-w-2xl mx-auto mb-8">
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"
                   placeholder="Full Name"
+                  value={formData.name}
+                  onChange={(e) => handleInputChange('name', e.target.value)}
+                  required
                   className="px-4 py-3 rounded-xl text-primary bg-white/90 placeholder-primary/70 focus:outline-none focus:ring-2 focus:ring-white"
                 />
                 <input
                   type="email"
                   placeholder="Email Address"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
+                  required
                   className="px-4 py-3 rounded-xl text-primary bg-white/90 placeholder-primary/70 focus:outline-none focus:ring-2 focus:ring-white"
                 />
               </div>
-              <select className="w-full px-4 py-3 rounded-xl text-primary bg-white/90 focus:outline-none focus:ring-2 focus:ring-white">
+              <select 
+                value={formData.career_track}
+                onChange={(e) => handleInputChange('career_track', e.target.value)}
+                required
+                className="w-full px-4 py-3 rounded-xl text-primary bg-white/90 focus:outline-none focus:ring-2 focus:ring-white">
                 <option value="">Select Career Track</option>
                 <option value="cloud">Cloud Engineering</option>
                 <option value="sales">Sales & Marketing</option>
                 <option value="technical">Technical AI & Robotics Engineering</option>
                 <option value="data">Data Analytics / BI / Data Science</option>
               </select>
-              <Button className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full group">
-                Apply Today
+              <Button 
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full group">
+                {isSubmitting ? 'Submitting...' : 'Apply Today'}
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>

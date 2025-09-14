@@ -87,6 +87,26 @@
 }
 
 @layer base {
+  /* Hide default scrollbar but keep functionality */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  /* Firefox */
+  html {
+    scrollbar-width: none;
+  }
+
+  /* For older browsers */
+  body {
+    -ms-overflow-style: none;
+  }
+
   * {
     @apply border-border;
   }

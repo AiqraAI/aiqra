@@ -17,6 +17,7 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<{[key: string]: string}>({});
 
   const inquiryTypes = [
     { value: 'partnership', label: 'Partnership Opportunities' },
@@ -35,8 +36,33 @@ const Contact = () => {
     }));
   };
 
+  const validateForm = () => {
+    const newErrors: {[key: string]: string} = {};
+    
+    if (!formData.company.trim()) {
+      newErrors.company = 'Company name is required';
+    }
+    
+    if (!formData.inquiry_type) {
+      newErrors.inquiry_type = 'Please select an inquiry type';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      toast({
+        title: "Form Validation Error",
+        description: "Please fill in all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
@@ -56,6 +82,7 @@ const Contact = () => {
         inquiry_type: '',
         message: ''
       });
+      setErrors({});
     } catch (error) {
       toast({
         title: "Error",
@@ -126,19 +153,21 @@ const Contact = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Company/Organization</label>
+                    <label className="block text-sm font-medium mb-2">Company/Organization *</label>
                     <Input
                       type="text"
                       value={formData.company}
                       onChange={(e) => handleInputChange('company', e.target.value)}
                       placeholder="Your company name"
-                      className="w-full"
+                      required
+                      className={`w-full ${errors.company ? 'border-red-500' : ''}`}
                     />
+                    {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company}</p>}
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Inquiry Type *</label>
                     <Select value={formData.inquiry_type} onValueChange={(value) => handleInputChange('inquiry_type', value)}>
-                      <SelectTrigger className="w-full">
+                      <SelectTrigger className={`w-full ${errors.inquiry_type ? 'border-red-500' : ''}`}>
                         <SelectValue placeholder="Select inquiry type" />
                       </SelectTrigger>
                       <SelectContent>
@@ -149,6 +178,7 @@ const Contact = () => {
                         ))}
                       </SelectContent>
                     </Select>
+                    {errors.inquiry_type && <p className="text-red-500 text-sm mt-1">{errors.inquiry_type}</p>}
                   </div>
                 </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Linkedin, X, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 const Footer = () => {
   const footerLinks = {
     company: [{
@@ -12,16 +12,13 @@ const Footer = () => {
     }],
     opportunities: [{
       name: 'Internships',
-      href: '/internships'
+      href: '/careers'
     }, {
       name: 'Careers',
       href: '/careers'
     }, {
       name: 'Partnerships',
       href: '/contact'
-    }, {
-      name: 'Training Programs',
-      href: '/training'
     }],
     legal: [{
       name: 'Terms of Use',
@@ -39,8 +36,8 @@ const Footer = () => {
     icon: Linkedin,
     href: '#'
   }, {
-    name: 'Twitter',
-    icon: Twitter,
+    name: 'X',
+    icon: X,
     href: '#'
   }, {
     name: 'Instagram',
