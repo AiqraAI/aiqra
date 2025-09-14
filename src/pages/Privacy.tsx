@@ -12,7 +12,7 @@ const Privacy = () => {
               <span className="block text-secondary-brand">Policy</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Your privacy and data security are our top priorities at AIQRA.ai
+              Your privacy and data security are our top priorities at AIQRA
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@ const Privacy = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-3">6. Contact Us</h3>
                   <p>
                     If you have questions about this Privacy Policy, please contact us through our Contact page 
-                    or at privacy@aiqra.ai
+                    or at privacy@aiqra
                   </p>
                 </div>
 

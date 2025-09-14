@@ -97,7 +97,7 @@ const Index = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src={heroImage} 
-            alt="AIQRA.ai - Advanced AI and Robotics Technology" 
+            alt="AIQRA - Advanced AI and Robotics Technology" 
             className="w-full h-full object-cover"
             style={{ transform: `translateY(${parallaxOffset}px)` }}
           />
@@ -201,12 +201,23 @@ const Index = () => {
           </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industries.map((industry, index) => 
-              <Link 
-                key={index} 
-                to="/solutions" 
-                className={`relative overflow-hidden rounded-2xl p-8 text-white bg-gradient-to-br ${industry.gradient} hover:scale-105 transition-all duration-500 cursor-pointer group block transform hover:rotate-1`}
-              >
+            {industries.map((industry, index) => {
+              const getIndustryLink = (name: string) => {
+                switch (name) {
+                  case 'Telecommunications': return '/telecommunications';
+                  case 'Education': return '/education';
+                  case 'AI-Powered Sales Lead Generator': return '/ai-sales-lead-generator';
+                  case 'Enterprise': return '/enterprise';
+                  default: return '/solutions';
+                }
+              };
+              
+              return (
+                <Link 
+                  key={index} 
+                  to={getIndustryLink(industry.name)} 
+                  className={`relative overflow-hidden rounded-2xl p-8 text-white bg-gradient-to-br ${industry.gradient} hover:scale-105 transition-all duration-500 cursor-pointer group block transform hover:rotate-1`}
+                >
                 {/* Interactive glow effect */}
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
@@ -230,7 +241,8 @@ const Index = () => {
                 <div className="absolute top-4 right-4 w-2 h-2 bg-white/40 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300" />
                 <div className="absolute bottom-6 left-6 w-1 h-1 bg-white/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300" style={{ animationDelay: '0.5s' }} />
               </Link>
-            )}
+              );
+            })}
           </div>
         </div>
       </section>

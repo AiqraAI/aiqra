@@ -71,7 +71,7 @@ const Contact = () => {
       
       toast({
         title: "Message Sent Successfully!",
-        description: "Thank you for contacting AIQRA.ai. We'll respond within 24 hours.",
+        description: "Thank you for contacting AIQRA. We'll respond within 24 hours.",
       });
       
       // Reset form

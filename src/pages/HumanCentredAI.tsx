@@ -8,30 +8,30 @@ import { ArrowRight, Heart, Shield, Leaf, Users, Smartphone, GraduationCap, Buil
 const HumanCentredAI = () => {
   // SEO Meta Tags
   useEffect(() => {
-    document.title = 'Holistic Human-Centred AI Solutions | AIQRA.ai';
+    document.title = 'Holistic Human-Centred AI Solutions | AIQRA';
     
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Discover AIQRA.ai\'s holistic, human-centred AI solutions — ethical, transparent, and designed to empower people across telecom, Finance, Insurance, Education, Real estate, Healthcare, and Government.');
+      metaDescription.setAttribute('content', 'Discover AIQRA\'s holistic, human-centred AI solutions — ethical, transparent, and designed to empower people across telecom, Finance, Insurance, Education, Real estate, Healthcare, and Government.');
     }
     
     // Update OG tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
-      ogTitle.setAttribute('content', 'Holistic Human-Centred AI Solutions | AIQRA.ai');
+      ogTitle.setAttribute('content', 'Holistic Human-Centred AI Solutions | AIQRA');
     }
     
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
-      ogDescription.setAttribute('content', 'Discover AIQRA.ai\'s holistic, human-centred AI solutions — ethical, transparent, and designed to empower people across multiple industries.');
+      ogDescription.setAttribute('content', 'Discover AIQRA\'s holistic, human-centred AI solutions — ethical, transparent, and designed to empower people across multiple industries.');
     }
     
     // Cleanup function to restore original meta tags when component unmounts
     return () => {
-      document.title = 'AIQRA.ai - Women-Led AI & Robotics Powerhouse | Gulf Innovation';
+      document.title = 'AIQRA - Women-Led AI & Robotics Powerhouse | Gulf Innovation';
       if (metaDescription) {
-        metaDescription.setAttribute('content', 'AIQRA.ai is a women-led, Gulf-born AI and robotics powerhouse creating agentic intelligence that acts with purpose. Leading sovereign technology development across the Gulf region.');
+        metaDescription.setAttribute('content', 'AIQRA is a women-led, Gulf-born AI and robotics powerhouse creating agentic intelligence that acts with purpose. Leading sovereign technology development across the Gulf region.');
       }
     };
   }, []);
@@ -148,7 +148,7 @@ const HumanCentredAI = () => {
               AI that puts people first.
             </h1>
             <h2 className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">
-              At AIQRA.ai, we believe technology should serve humanity, not replace it. Our human-centred approach ensures AI solutions are designed with empathy, ethics, and measurable impact in line with GCC AI Governance.
+              At AIQRA, we believe technology should serve humanity, not replace it. Our human-centred approach ensures AI solutions are designed with empathy, ethics, and measurable impact in line with GCC AI Governance.
             </h2>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -183,7 +183,7 @@ const HumanCentredAI = () => {
               </h2>
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Traditional AI often focuses purely on efficiency and automation. At AIQRA.ai, we go beyond the algorithm — embedding human values, cultural sensitivity, and accessibility into every product.
+                  Traditional AI often focuses purely on efficiency and automation. At AIQRA, we go beyond the algorithm — embedding human values, cultural sensitivity, and accessibility into every product.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
@@ -287,7 +287,7 @@ const HumanCentredAI = () => {
 
           <div className="text-center mt-12 p-8 bg-gradient-to-r from-primary/5 to-secondary-brand/5 rounded-2xl">
             <p className="text-lg font-medium text-foreground">
-              <strong>Summary:</strong> Wherever AI and robotics are deployed, the demand is the same: automation with accountability, measurable ROI, and seamless integration into existing human workflows. This is where AIQRA.ai leads.
+              <strong>Summary:</strong> Wherever AI and robotics are deployed, the demand is the same: automation with accountability, measurable ROI, and seamless integration into existing human workflows. This is where AIQRA leads.
             </p>
           </div>
         </div>

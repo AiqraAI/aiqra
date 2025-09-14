@@ -12,7 +12,7 @@ const Terms = () => {
               <span className="block text-secondary-brand">Use</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              These terms govern your use of AIQRA.ai services and solutions.
+              These terms govern your use of AIQRA services and solutions.
             </p>
           </div>
         </div>
@@ -29,14 +29,14 @@ const Terms = () => {
               
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  Welcome to AIQRA.ai. These Terms of Use ("Terms") govern your access to and use of our website, 
+                  Welcome to AIQRA. These Terms of Use ("Terms") govern your access to and use of our website, 
                   services, and AI solutions. By accessing or using our services, you agree to be bound by these Terms.
                 </p>
 
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">1. Acceptance of Terms</h3>
                   <p>
-                    By using AIQRA.ai services, you acknowledge that you have read, understood, and agree to be bound 
+                    By using AIQRA services, you acknowledge that you have read, understood, and agree to be bound 
                     by these Terms and our Privacy Policy.
                   </p>
                 </div>
@@ -68,7 +68,7 @@ const Terms = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">5. Contact Information</h3>
                   <p>
-                    For questions about these Terms, please contact us through our Contact page or at legal@aiqra.ai
+                    For questions about these Terms, please contact us through our Contact page or at legal@aiqra
                   </p>
                 </div>
 

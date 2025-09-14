@@ -45,7 +45,7 @@ const Sitemap = () => {
               <span className="block text-secondary-brand">Map</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Navigate through all pages and sections of AIQRA.ai
+              Navigate through all pages and sections of AIQRA
             </p>
           </div>
         </div>
