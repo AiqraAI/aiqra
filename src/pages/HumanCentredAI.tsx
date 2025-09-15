@@ -316,46 +316,6 @@ const HumanCentredAI = () => {
         </div>
       </section>
 
-      {/* FAQs */}
-      <section id="faqs" className="section-padding">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-gradient-primary">
-              Frequently Asked Questions
-            </h2>
-          </div>
-          
-          <Accordion type="single" collapsible className="max-w-3xl mx-auto">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`faq-${index}`} className="border border-border rounded-lg mb-4">
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
-                  <h3 className="font-semibold">{faq.question}</h3>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6">
-                  <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
-      {/* Persistent Contact Strip */}
-      <section id="contact-inline" className="py-8 bg-accent-brand/10 border-t border-b border-accent-brand/20">
-        <div className="container-custom">
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 text-center">
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-accent-brand" />
-              <span className="text-foreground">Prefer a quick consult? Book a 15-min discovery.</span>
-            </div>
-            <Link to="/contact#book">
-              <Button variant="outline" className="border-accent-brand text-accent-brand hover:bg-accent-brand hover:text-white">
-                Book Now
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
