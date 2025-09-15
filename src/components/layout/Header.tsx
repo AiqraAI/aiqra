@@ -16,7 +16,7 @@ const Header = () => {
     href: '/solutions'
   }, {
     name: 'Human-Centered AI',
-    href: '/human-centred-ai'
+    href: '/solutions/human-centred-ai'
   }, {
     name: 'Careers',
     href: '/careers'
