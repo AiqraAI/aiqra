@@ -42,7 +42,7 @@ const Footer = () => {
   }, {
     name: 'Instagram',
     icon: Instagram,
-    href: '#'
+    href: 'https://www.instagram.com/aiqraai?igsh=MXFqdmtqaHRha2Q1bg=='
   }];
   return <footer className="bg-gradient-to-r from-foreground to-primary text-white">
       <div className="container-custom section-padding">
